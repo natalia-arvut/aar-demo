@@ -66,7 +66,7 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
 
 <!-- ===== HERO (две половины + тёмная полоса-меню) ===== -->
 <section style="min-height:100svh;display:flex;flex-direction:column;padding-top:66px;">
-  <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:0;">
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr;min-height:0;">
     <!-- левая половина: текст -->
     <div style="display:flex;align-items:center;background:var(--cream);padding:48px clamp(26px,5vw,72px);">
       <div class="hero-anim" style="max-width:540px;">
@@ -85,7 +85,7 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
     </div>
     <!-- правая половина: здание -->
     <div style="position:relative;overflow:hidden;background:var(--ink);">
-      <img src="assets/img/building.jpg" alt="Здание AAR Consulting, Rapperswil-Jona" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;">
+      <img src="assets/img/building.jpg" alt="Здание AAR Consulting, Rapperswil-Jona" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;">
     </div>
   </div>
   <!-- тёмная полоса-меню (как у них) -->
@@ -147,19 +147,6 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
       <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="5" rx="1"/><rect x="14" y="15" width="7" height="5" rx="1"/></svg></div><h3 class="upper">Учёт по филиалам и центрам</h3><p>Каждое направление, филиал или подразделение — как отдельный центр прибыли. Видно, где зарабатываете, а где теряете.</p></div>
       <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 8-9 9-5.5-1-9-4-9-9V6l9-3 9 3z"/></svg></div><h3 class="upper">Точность без ошибок</h3><p>Каждая цифра сверена с банком, реестром MWST и зарплатой — на раппен. Находим то, что Excel пропускает.</p></div>
       <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 9h18M8 21h8M12 17v4"/></svg></div><h3 class="upper">Защищённый портал AAR</h3><p>Передавайте документы как удобно — e-mail, фото, PDF — и в любой момент смотрите свою финансовую картину онлайн.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ФОТО-БЛОК (офис / приёмная) ===== -->
-<section style="position:relative;min-height:clamp(360px,46vh,460px);display:flex;align-items:center;overflow:hidden;">
-  <img src="assets/img/office.jpg" alt="Современный офис и приёмная" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;">
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,26,26,.78) 0%,rgba(26,26,26,.5) 42%,rgba(26,26,26,.12) 78%,rgba(26,26,26,0) 100%);"></div>
-  <div class="wrap" style="position:relative;">
-    <div class="reveal" style="max-width:560px;color:#fff;">
-      <p class="eyebrow" style="color:var(--gold);">Реальное время</p>
-      <h2 class="upper" style="color:#fff;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:.02em;margin:14px 0 16px;line-height:1.2;">Финансовая картина вашего бизнеса — открыта каждый день</h2>
-      <p style="color:#e7e3d8;max-width:480px;">Не отчёт раз в квартал, а актуальные цифры в любой момент: баланс, прибыль, MWST, движение денег. Вы принимаете решения, опираясь на сегодняшние данные, а не на прошлый период.</p>
     </div>
   </div>
 </section>
@@ -246,6 +233,19 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
       <div class="reveal" style="text-align:center;"><div style="width:54px;height:54px;border:1.5px solid var(--gold);color:var(--gold-d);font-family:'Lato','Source Sans 3';font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">1</div><h3 class="upper" style="font-size:1.1rem;margin-bottom:10px;">Вы передаёте документы</h3><p style="font-size:.95rem;">E-mail, фото, PDF-выписки или загрузка через портал. Без внедрения софта и переобучения вашей команды.</p></div>
       <div class="reveal" style="text-align:center;"><div style="width:54px;height:54px;border:1.5px solid var(--gold);color:var(--gold-d);font-family:'Lato','Source Sans 3';font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">2</div><h3 class="upper" style="font-size:1.1rem;margin-bottom:10px;">Мы ведём учёт в реальном времени</h3><p style="font-size:.95rem;">Проводки, сверка с источником, MWST, зарплата — с контролем качества на каждом шаге. Данные в Швейцарии.</p></div>
       <div class="reveal" style="text-align:center;"><div style="width:54px;height:54px;border:1.5px solid var(--gold);color:var(--gold-d);font-family:'Lato','Source Sans 3';font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">3</div><h3 class="upper" style="font-size:1.1rem;margin-bottom:10px;">Вы видите картину каждый день</h3><p style="font-size:.95rem;">Баланс, прибыль, MWST, разрезы по филиалам — в реальном времени, плюс отчётность уровня финдиректора.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ФОТО-БЛОК (офис) ===== -->
+<section style="position:relative;min-height:clamp(380px,48vh,480px);display:flex;align-items:center;overflow:hidden;">
+  <img src="assets/img/office.jpg" alt="Современный офис финансовой команды" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,20,.9) 0%,rgba(20,20,20,.74) 44%,rgba(20,20,20,.4) 74%,rgba(20,20,20,.18) 100%);"></div>
+  <div class="wrap" style="position:relative;">
+    <div class="reveal" style="max-width:580px;color:#fff;">
+      <p class="eyebrow" style="color:var(--gold);">Реальное время</p>
+      <h2 class="upper" style="color:#fff;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:.02em;margin:14px 0 16px;line-height:1.2;text-shadow:0 2px 18px rgba(0,0,0,.45);">Финансовая картина вашего бизнеса — открыта каждый день</h2>
+      <p style="color:#f0ede5;max-width:490px;text-shadow:0 1px 12px rgba(0,0,0,.5);">Не отчёт раз в квартал, а актуальные цифры в любой момент: баланс, прибыль, MWST, движение денег. Вы принимаете решения, опираясь на сегодняшние данные, а не на прошлый период.</p>
     </div>
   </div>
 </section>
