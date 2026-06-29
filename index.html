@@ -46,8 +46,8 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
 .hero-anim>*:nth-child(3){animation-delay:.36s}.hero-anim>*:nth-child(4){animation-delay:.48s}
 .hero-anim>*:nth-child(5){animation-delay:.60s}.hero-anim>*:nth-child(6){animation-delay:.72s}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto;}.reveal{opacity:1;transform:none;}.hero-anim>*{opacity:1;}}
-#toTop{position:fixed;right:24px;bottom:24px;z-index:60;width:46px;height:46px;background:var(--ink);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s,transform .3s,background .2s;}
-#toTop.show{opacity:1;visibility:visible;transform:none;}#toTop:hover{background:var(--gold);}
+#toTop{position:fixed;right:24px;bottom:24px;z-index:60;width:46px;height:46px;background:rgba(175,152,72,.62);color:#fff;border:none;border-radius:3px;cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);box-shadow:0 10px 24px -12px rgba(40,40,40,.45);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s,transform .3s,background .2s;}
+#toTop.show{opacity:1;visibility:visible;transform:none;}#toTop:hover{background:rgba(143,120,54,.92);}
 @media(max-width:880px){.hide-mob{display:none!important;}}
 </style>
 </head>
@@ -85,7 +85,7 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
     </div>
     <!-- правая половина: здание -->
     <div style="position:relative;overflow:hidden;background:var(--ink);">
-      <img src="assets/img/building.jpg" alt="Здание AAR Consulting, Rapperswil-Jona" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;">
+      <img src="assets/img/building.jpg" alt="Здание AAR Consulting, Rapperswil-Jona" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;">
     </div>
   </div>
   <!-- тёмная полоса-меню (как у них) -->
@@ -151,14 +151,27 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
   </div>
 </section>
 
+<!-- ===== ФОТО-БЛОК (офис / приёмная) ===== -->
+<section style="position:relative;min-height:clamp(360px,46vh,460px);display:flex;align-items:center;overflow:hidden;">
+  <img src="assets/img/office.jpg" alt="Современный офис и приёмная" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,26,26,.78) 0%,rgba(26,26,26,.5) 42%,rgba(26,26,26,.12) 78%,rgba(26,26,26,0) 100%);"></div>
+  <div class="wrap" style="position:relative;">
+    <div class="reveal" style="max-width:560px;color:#fff;">
+      <p class="eyebrow" style="color:var(--gold);">Реальное время</p>
+      <h2 class="upper" style="color:#fff;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:.02em;margin:14px 0 16px;line-height:1.2;">Финансовая картина вашего бизнеса — открыта каждый день</h2>
+      <p style="color:#e7e3d8;max-width:480px;">Не отчёт раз в квартал, а актуальные цифры в любой момент: баланс, прибыль, MWST, движение денег. Вы принимаете решения, опираясь на сегодняшние данные, а не на прошлый период.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== ПРЕИМУЩЕСТВА (тёмный баннер) ===== -->
 <section id="preimushchestva" style="padding:92px 0;background:var(--ink);color:#e9e6dd;">
   <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center;">
     <div class="reveal">
       <p class="eyebrow" style="color:var(--gold);">Почему AAR Consulting</p>
-      <h2 class="upper" style="color:#fff;font-size:clamp(1.7rem,3.2vw,2.4rem);letter-spacing:.02em;margin:14px 0 22px;line-height:1.2;">Малой фирме — масштаб крупной</h2>
-      <p style="color:#c8c4b8;margin-bottom:16px;">AAR Consulting — отмеченный наградой <b style="color:#fff;">Bilanz Top Steuerexperte &amp; Treuhänder 2021</b> фидуциар, который думает по-предпринимательски. Реалтайм-платформа добавляет к привычному учёту высокомаржинальный «второй этаж» — обслуживание средних и крупных компаний.</p>
-      <p style="color:#c8c4b8;">Под боком — <b style="color:#fff;">Цюрих</b>, крупнейший рынок и финцентр Швейцарии, и свой кантон <b style="color:#fff;">Санкт-Галлен</b> с промышленностью и экспортом. Картину бизнеса вы видите в реальном времени, а данные размещены в Швейцарии.</p>
+      <h2 class="upper" style="color:#fff;font-size:clamp(1.7rem,3.2vw,2.4rem);letter-spacing:.02em;margin:14px 0 22px;line-height:1.2;">Масштаб крупной компании — без её штата</h2>
+      <p style="color:#c8c4b8;margin-bottom:16px;">Вы получаете финансовую функцию корпоративного уровня — команду экспертов и технологию реального времени — вместо того чтобы строить и содержать собственный отдел. За работу отвечает <b style="color:#fff;">AAR Consulting</b>, отмеченный наградой <b style="color:#fff;">Bilanz Top Steuerexperte &amp; Treuhänder 2021</b>.</p>
+      <p style="color:#c8c4b8;">Мы работаем в <b style="color:#fff;">Цюрихе</b> и <b style="color:#fff;">Восточной Швейцарии</b> и понимаем ваш рынок — от финансового центра до промышленного экспорта. Картину своего бизнеса вы видите в реальном времени, а данные остаются в Швейцарии.</p>
     </div>
     <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);">
       <div style="background:var(--ink);padding:28px 24px;"><div style="font-family:'Lato','Source Sans 3';font-size:2rem;color:var(--gold);">2021</div><div style="font-size:.86rem;color:#c8c4b8;margin-top:6px;">Bilanz Top Treuhänder</div></div>
@@ -242,12 +255,12 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 52px;">
       <p class="eyebrow">Регион</p>
-      <h2 class="h-sec" style="margin-top:12px;">Два сильных рынка под рукой</h2>
+      <h2 class="h-sec" style="margin-top:12px;">Рядом с вами — в Цюрихе и Восточной Швейцарии</h2>
       <div class="rule" style="margin:18px auto 0;"></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
-      <div class="reveal card"><h3 class="upper" style="color:var(--gold-d);">Цюрих</h3><p>Крупнейший рынок и финансовый центр Швейцарии прямо рядом с Rapperswil-Jona: тысячи средних и крупных компаний, самые высокие зарплаты — а значит самый сильный аргумент «in-house дорого».</p></div>
-      <div class="reveal card"><h3 class="upper" style="color:var(--gold-d);">Санкт-Галлен</h3><p>Свой кантон: <b style="color:var(--ink);">962 предприятия</b> от 50 сотрудников, промышленность и машиностроение, экспорт в зоне Bodensee / Австрия / Лихтенштейн — прямое попадание в мультивалютный учёт EUR/CHF.</p></div>
+      <div class="reveal card"><h3 class="upper" style="color:var(--gold-d);">Цюрих и Цюрихское озеро</h3><p>Из Rapperswil-Jona мы обслуживаем средние и крупные компании финансового центра Швейцарии. Та же команда и технология реального времени — без расходов на собственный финансовый отдел в самом дорогом для найма регионе страны.</p></div>
+      <div class="reveal card"><h3 class="upper" style="color:var(--gold-d);">Санкт-Галлен и Восточная Швейцария</h3><p>Наш кантон и наш дом: промышленность, машиностроение, экспорт в зоне Bodensee, Австрии и Лихтенштейна. Параллельный учёт <b style="color:var(--ink);">EUR/CHF</b> ведём точно под ваши экспортные операции — а данные остаются в Швейцарии.</p></div>
     </div>
   </div>
 </section>
@@ -286,8 +299,8 @@ h1,h2,h3,h4{font-family:'Lato','Source Sans 3',sans-serif;color:var(--ink);font-
   <div class="wrap">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.1);">
       <div>
-        <a href="#top"><img src="assets/img/logo-aar.png" alt="AAR Consulting" style="height:34px;width:auto;background:#fff;padding:6px 8px;"></a>
-        <p style="font-size:.9rem;color:rgba(255,255,255,.55);max-width:270px;margin-top:16px;">Steuerberatung &amp; Treuhand. Бухгалтерия и финансовая функция в реальном времени для компаний Цюриха и Восточной Швейцарии.</p>
+        <a href="#top" style="font-family:'Lato','Source Sans 3',sans-serif;font-size:1.5rem;letter-spacing:.02em;color:#fff;"><b style="color:var(--gold);">aar</b> consulting</a>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.55);max-width:270px;margin-top:14px;">Steuerberatung &amp; Treuhand. Бухгалтерия и финансовая функция в реальном времени для компаний Цюриха и Восточной Швейцарии.</p>
       </div>
       <div style="font-size:.9rem;">
         <h4 class="upper" style="color:#fff;font-size:.86rem;letter-spacing:.1em;margin-bottom:14px;">Контакт</h4>
